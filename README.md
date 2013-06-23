@@ -11,6 +11,8 @@ transbrute creates a throwaway Git repository, adds those parts of your
 project that you specified, and pushes them to the remote repository you
 specified.
 
+[![Build Status](https://travis-ci.org/knuton/grunt-transbrute.png?branch=master)](https://travis-ci.org/knuton/grunt-transbrute)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 

@@ -57,7 +57,7 @@ module.exports = function (grunt) {
     });
 
     steps.push(gitCMD('add', '.'));
-    steps.push(gitCMD('commit', '-m', '"' + message.replace(/%DATE\b/, (new Date()).toISOString()) + '"'));
+    steps.push(gitCMD('commit', '-m', message.replace(/%DATE\b/, (new Date()).toISOString())));
 
     if (force)
       steps.push(gitCMD('push', 'origin', 'master:refs/heads/'+branch, '--force'));

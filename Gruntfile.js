@@ -11,13 +11,13 @@
 module.exports = function(grunt) {
 
   // Mocks/spys for testing
-  
+
   var path = require('path');
 
   var spawn = function (cfg, handler) {
     var logfile = path.join(cfg.opts.cwd, 'gitlog'),
         logs,
-        cmd = [cfg.cmd].concat(cfg.args).join(' ');
+        cmd = [cfg.cmd].concat(cfg.args);
     logs = grunt.file.exists(logfile) ? grunt.file.readJSON(logfile) : [];
     logs.push(cmd);
     grunt.file.write(logfile, JSON.stringify(logs));

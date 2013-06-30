@@ -112,4 +112,7 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
+### 0.1.1 Bugfix (2013/06/30)
+* Fixed issue with commit message containing doublequotes
+
 ### 0.1.0 Initial release

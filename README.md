@@ -127,6 +127,9 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
+### 0.2.0 (2013/10/04)
+* Added option for tagging of commits
+
 ### 0.1.1 Bugfix (2013/06/30)
 * Fixed issue with commit message containing doublequotes
 

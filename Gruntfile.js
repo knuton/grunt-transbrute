@@ -60,6 +60,7 @@ module.exports = function(grunt) {
         remote: 'git@github.com:knuton/invisibility.git',
         branch: 'jungs-hier-kommt-der-master-branch',
         message: 'Add test data to master branch',
+        tag: '0.0.0',
         pull: false,
         force: true,
         files: [
@@ -68,6 +69,17 @@ module.exports = function(grunt) {
         remove: false,
         spawn: spawn, temp: { path: function () { return path.join('tmp', 'custom_options'); } }
       },
+      tag_message: {
+        remote: 'git@github.com:knuton/invisibility.git',
+        branch: 'jungs-hier-kommt-der-master-branch',
+        tag: '0.0.0',
+        tagMessage: 'Version 0.0.0.',
+        files: [
+          { src: '**/*', cwd: 'test/fixtures', expand: true },
+        ],
+        remove: false,
+        spawn: spawn, temp: { path: function () { return path.join('tmp', 'tag_message'); } }
+      }
     },
 
     // Unit tests.

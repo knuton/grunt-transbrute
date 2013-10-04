@@ -47,6 +47,8 @@ grunt.initConfig({
       message: 'Add foo on %DATE',
       remote: 'git@github.com:you/foo.git',
       branch: 'target-branch',
+      tag: '0.1.3',
+      tagMessage: 'Release 0.1.3',
       pull: true,
       force: false,
       files: [
@@ -77,6 +79,19 @@ Default value: `'Add <TARGET_NAME> from <TIMESTAMP>'`
 
 The commit message to use. An occurrence of `%DATE` in the string will
 be replaced by the current timestamp in ISO format.
+
+#### tag
+Type: `String`
+
+If a tag identifier is given, the commit will be tagged before being
+pushed. Can be combined with `tagMessage`.
+
+#### tagMessage
+Type: `String`
+
+If in addition to a tag identifier a tag message is given, the tag will
+be annotated with this message.If `tag` is not provided, `tagMessage`
+will be ignored.
 
 #### pull
 Type: `Boolean`

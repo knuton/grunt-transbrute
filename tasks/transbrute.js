@@ -15,6 +15,8 @@ module.exports = function (grunt) {
     if (!this.data.branch) grunt.fail.fatal("No branch specified.");
     var target = this.target,
         message = this.data.message || "Add " + target + " from %DATE",
+        tag = this.data.tag || void 0,
+        tagMessage = this.data.tagMessage || void 0,
         files = this.files,
         remote = this.data.remote,
         branch = this.data.branch,
@@ -59,10 +61,15 @@ module.exports = function (grunt) {
     steps.push(gitCMD('add', '.'));
     steps.push(gitCMD('commit', '-m', message.replace(/%DATE\b/, (new Date()).toISOString())));
 
+    if (tag && tagMessage)
+      steps.push(gitCMD('tag', '--annotate', '-m', tagMessage, tag));
+    else if (tag)
+      steps.push(gitCMD('tag', tag));
+
     if (force)
-      steps.push(gitCMD('push', 'origin', 'master:refs/heads/'+branch, '--force'));
+      steps.push(gitCMD('push', 'origin', 'master:refs/heads/'+branch, '--tags', '--force'));
     else
-      steps.push(gitCMD('push', 'origin', 'master:refs/heads/'+branch));
+      steps.push(gitCMD('push', 'origin', 'master:refs/heads/'+branch, '--tags'));
 
     // After finishing:
     // Clean up and notify grunt about task being finished

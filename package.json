@@ -1,7 +1,7 @@
 {
   "name": "grunt-transbrute",
   "description": "Publish project files using Git.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/knuton/grunt-transbrute",
   "author": {
     "name": "Johannes Emerich",

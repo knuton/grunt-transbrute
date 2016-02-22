@@ -127,6 +127,9 @@ Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 
+### 1.0.0 (2015/22/02)
+* Updated Grunt dependency to [prepare for Grunt 1.0.0](http://gruntjs.com/blog/2016-02-11-grunt-1.0.0-rc1-released#peer-dependencies)
+
 ### 0.2.0 (2013/10/04)
 * Added option for tagging of commits
 

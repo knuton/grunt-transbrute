@@ -14,7 +14,6 @@ specified.
 [![Build Status](https://travis-ci.org/knuton/grunt-transbrute.png?branch=master)](https://travis-ci.org/knuton/grunt-transbrute)
 
 ## Getting Started
-This plugin requires Grunt `~0.4.1`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to
 check out the [Getting Started](http://gruntjs.com/getting-started)
